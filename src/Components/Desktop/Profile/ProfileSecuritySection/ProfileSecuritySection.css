@@ -1,0 +1,21 @@
+.password-container,
+.email-container,
+.username-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px;
+  width: 80%;
+}
+
+.password-input,
+.email-input,
+.username-input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

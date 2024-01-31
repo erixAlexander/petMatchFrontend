@@ -1,0 +1,20 @@
+.app-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+}
+
+.app-name h1{
+    font-size: 5rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}

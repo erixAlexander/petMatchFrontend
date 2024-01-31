@@ -1,0 +1,44 @@
+.matches-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 90%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+.match {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  padding: 0 1rem;
+  font-weight: 700;
+}
+
+.match:nth-child(even) {
+  background-color: #c1c1c114; /* Or any color you prefer */
+}
+
+.match img {
+  width: 60px;
+  height: 80px;
+  border-radius: 5%;
+  object-fit: cover;
+}
+
+.match-name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 120px;
+  gap: 0.5rem;
+}

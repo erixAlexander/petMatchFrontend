@@ -1,0 +1,26 @@
+.navbar {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .slogan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.navbar img {
+  width: 80px;
+  height: 80px;
+}
