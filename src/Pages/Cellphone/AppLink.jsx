@@ -1,10 +1,12 @@
 import React from "react";
-import "./AppLink.css";
 import image from "../../assets/expo.png";
 import androidQR from "../../assets/android-expo.svg";
 import iosQR from "../../assets/ios-expo.svg";
+import square from "../../assets/square.svg";
+import "./AppLink.css";
 
 const AppLink = ({ fontColor }) => {
+  const [OS, setOS] = React.useState("android");
   return (
     <div className={`app-link-container ${fontColor === "black" && "black"}`}>
       <h1>Hi Friend! </h1>
@@ -14,12 +16,28 @@ const AppLink = ({ fontColor }) => {
         <img src={image} alt="Get it on Google Play" />
         <div className="qrs-container">
           <div className="qr-container">
-            <p>Expo Go in Android</p>
-            <img src={androidQR} alt="Get it on Google Play" />
+            <p onClick={() => setOS("android")}>Expo Go in Android</p>
+            {OS === "android" ? (
+              <img src={androidQR} alt="Get it on Google Play" />
+            ) : (
+              <img
+                style={{ width: "180px" }}
+                src={square}
+                alt="QR Code Placeholder"
+              ></img>
+            )}
           </div>
           <div className="qr-container">
-            <p>Expo Go in iOS</p>
-            <img src={iosQR} alt="Get it on Google Play" />
+            <p onClick={() => setOS("ios")}>Expo Go in iOS</p>
+            {OS === "ios" ? (
+              <img src={iosQR} alt="Get it on Google Play" />
+            ) : (
+              <img
+                style={{ width: "180px" }}
+                src={square}
+                alt="QR Code Placeholder"
+              ></img>
+            )}
           </div>
         </div>
       </div>
