@@ -40,11 +40,6 @@
   min-width: 300px;
 }
 
-.app-link-container a:hover {
-  background-color: #fe3072;
-  color: #fff;
-}
-
 .app-link-container img {
   width: 200px;
 }
@@ -73,6 +68,12 @@
   font-weight: 500;
   color: #000;
   margin: 0;
+  cursor: pointer;
+}
+
+.qr-container p:hover {
+  color: #fe3072;
+
 }
 
 @media (max-width: 599px) {
