@@ -8,6 +8,7 @@ import useAxiosPrivate from "../hooks/useAxiosPrivate";
 
 const PersistLogin = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [cookies] = useCookies();
   const refresh = useRefreshToken();
   const { auth } = useAuth();
@@ -15,6 +16,18 @@ const PersistLogin = () => {
   const { setAuth } = useAuth();
   const userId = cookies.userId;
   const axiosPrivate = useAxiosPrivate();
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const getUser = async (userId) => {
     console.log("Persist");
@@ -51,7 +64,9 @@ const PersistLogin = () => {
 
   return (
     <>
-      {auth?.accessToken && cookies.userId && auth?.user ? (
+      {windowWidth < 650 ? (
+        <p>Dummy text</p>
+      ) : auth?.accessToken && cookies.userId && auth?.user ? (
         <Outlet />
       ) : isLoading ? (
         <p>Loading...</p>

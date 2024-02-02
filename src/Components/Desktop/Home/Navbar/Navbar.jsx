@@ -10,7 +10,7 @@ const Navbar = ({ setOpenModal }) => {
     <div className="navbar">
       <div className="slogan">
         <img src={logo} alt="logo" />
-        <h2>Let's meet our new fury friends</h2>
+        <h2 className="slogan">Let's meet our new furry friends</h2>
       </div>
 
       <Buttons isLoggedIn={cookies.userId} setOpenModal={setOpenModal} />
