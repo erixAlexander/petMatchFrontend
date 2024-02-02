@@ -19,7 +19,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<Home />}></Route>
-      <Route path="expogo" element={<ExpoPage />} />
+      <Route path="/expogo" element={<ExpoPage />} />
       <Route element={<PersistLogin />}>
         <Route path="onboarding" element={<Onboarding />} />
         <Route path="dashboard" element={<Dashboard />} />
