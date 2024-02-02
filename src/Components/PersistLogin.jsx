@@ -5,6 +5,7 @@ import useAuth from "../hooks/useAuth";
 import useLogout from "../hooks/useLogout";
 import { useCookies } from "react-cookie";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
+import AppLink from "../Pages/Cellphone/AppLink";
 
 const PersistLogin = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -65,7 +66,7 @@ const PersistLogin = () => {
   return (
     <>
       {windowWidth < 650 ? (
-        <p>Dummy text</p>
+        <AppLink fontColor={"black"} />
       ) : auth?.accessToken && cookies.userId && auth?.user ? (
         <Outlet />
       ) : isLoading ? (

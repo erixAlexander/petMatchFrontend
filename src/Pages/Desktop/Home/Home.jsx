@@ -3,6 +3,7 @@ import AppName from "../../../Components/Desktop/Home/AppName/AppName";
 import Navbar from "../../../Components/Desktop/Home/Navbar/Navbar";
 import Signin from "../../../Components/Desktop/Home/Signin/Signin";
 import "./Home.css";
+import AppLink from "../../Cellphone/AppLink";
 
 const Home = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -23,7 +24,7 @@ const Home = () => {
   return (
     <div className="home-background">
       {windowWidth < 600 ? (
-        <p>Dummy text</p>
+        <AppLink />
       ) : (
         <>
           <Navbar setOpenModal={setOpenModal} />

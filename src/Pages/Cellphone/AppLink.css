@@ -1,0 +1,87 @@
+.app-link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.app-link-container h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.app-link-container p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+
+.app-link-container a {
+  text-decoration: none;
+  color: #fe3072;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  margin-top: 150px;
+  background-color: #fff;
+}
+
+.app-link-container a:hover {
+  background-color: #fe3072;
+  color: #fff;
+}
+
+.app-link-container img {
+  width: 200px;
+}
+
+@media (max-width: 599px) {
+  .app-link-container h1 {
+    font-size: 30px;
+  }
+
+  .app-link-container p {
+    font-size: 16px;
+  }
+
+  .app-link-container a {
+    font-size: 16px;
+  }
+}
+
+.black {
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.4),
+      rgba(255, 255, 255, 0)
+    ),
+    url("../../assets/home-background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh;
+}
