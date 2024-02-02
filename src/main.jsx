@@ -12,6 +12,7 @@ import Onboarding from "./Pages/Desktop/Onboarding/Onboarding.jsx";
 import Dashboard from "./Pages/Desktop/Dashboard/Dashboard.jsx";
 import Profile from "./Pages/Desktop/Profile/Profile.jsx";
 import PersistLogin from "./Components/PersistLogin.jsx";
+import ExpoPage from "./Pages/Cellphone/ExpoPage/ExpoPage.jsx";
 import "./index.css";
 
 const router = createBrowserRouter(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="profile" element={<Profile />} />
       </Route>
+      <Route path="expogo" element={<ExpoPage />} />
     </>
   )
 );

@@ -1,0 +1,65 @@
+.expogo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.expogo-container h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.expogo-container img {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.expogo-container p {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.expogo-container .qrs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.expogo-container .qrs-container img {
+  width: 100%;
+  margin: 0 10px;
+}
+
+.expogo-container .qrs-container p {
+  font-size: 1.2em;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.app-stores-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.app-stores-container img {
+  width: 100%;
+  max-width: 150px;
+  margin: 0 10px;
+}
+
+@media (max-width: 600px) {
+  .expogo-container {
+    max-width: 90%;
+    margin: 40px auto;
+  }
+}

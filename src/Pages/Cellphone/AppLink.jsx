@@ -16,7 +16,7 @@ const AppLink = ({ fontColor }) => {
         <img src={image} alt="Get it on Google Play" />
         <div className="qrs-container">
           <div className="qr-container">
-            <p onClick={() => setOS("android")}>Expo Go in Android</p>
+            <p onClick={() => setOS("android")}>Expo Go on Android</p>
             {OS === "android" ? (
               <img src={androidQR} alt="Get it on Google Play" />
             ) : (
@@ -28,7 +28,7 @@ const AppLink = ({ fontColor }) => {
             )}
           </div>
           <div className="qr-container">
-            <p onClick={() => setOS("ios")}>Expo Go in iOS</p>
+            <p onClick={() => setOS("ios")}>Expo Go on iOS</p>
             {OS === "ios" ? (
               <img src={iosQR} alt="Get it on Google Play" />
             ) : (

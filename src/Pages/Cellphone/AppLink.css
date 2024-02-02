@@ -40,6 +40,15 @@
   min-width: 300px;
 }
 
+.expo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .app-link-container img {
   width: 200px;
 }
@@ -73,7 +82,6 @@
 
 .qr-container p:hover {
   color: #fe3072;
-
 }
 
 @media (max-width: 599px) {
