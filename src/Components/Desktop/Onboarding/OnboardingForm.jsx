@@ -1,7 +1,6 @@
 import CustomSelect from "../../GlobalComponents/CustomInputs/CustomSelect/CustomSelect";
 import years from "../../../utils/yearsArray";
 import useAuth from "../../../hooks/useAuth";
-import useAxiosPrivate from "../../../hooks/useAxiosPrivate";
 import { useState } from "react";
 import CustomCheckbox from "../../GlobalComponents/CustomInputs/CustomCheckbox/CustomCheckbox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,10 +21,10 @@ const OnboardingForm = () => {
   const [petName, setPetName] = useState(auth?.user?.pet_name);
   const [genderPref, setGenderPref] = useState(auth?.user?.gender_interest);
   const [looking_for, setLooking_for] = useState({
-    adopt: auth?.user?.looking_for.adopt,
-    friend: auth?.user?.looking_for.friend,
-    give_for_adoption: auth?.user?.looking_for.give_for_adoption,
-    mate: auth?.user?.looking_for.mate,
+    adopt: auth?.user?.looking_for?.adopt,
+    friend: auth?.user?.looking_for?.friend,
+    give_for_adoption: auth?.user?.looking_for?.give_for_adoption,
+    mate: auth?.user?.looking_for?.mate,
   });
   const [address, setAddress] = useState(auth?.user?.address_info);
   const [inputFiles, setInputFiles] = useState([]);

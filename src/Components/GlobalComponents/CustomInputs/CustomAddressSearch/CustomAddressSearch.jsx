@@ -71,7 +71,7 @@ export default function CustomAddressSearch({ address, setAddress, isUpdate }) {
   return (
     <div className="address-container">
       <p className="address-title">Choose your closest location: </p>
-      {address.full_name && address.full_name != "" ? (
+      {address?.full_name && address?.full_name != "" ? (
         <p>{address?.full_name}</p>
       ) : (
         <p>{"No location selected"}</p>

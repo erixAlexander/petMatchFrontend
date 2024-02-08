@@ -19,7 +19,10 @@ const Header = ({ setDisplayChat }) => {
     <div className="header-container">
       <Link to={"/profile"}>
         <div className="user-info-container">
-          <img src={auth?.user?.images[0].url} alt="profile-img" />
+          <img
+            src={auth?.user?.images[0]?.url || "https://via.placeholder.com/150"}
+            alt="profile-img"
+          />
           <h2>{auth?.user?.pet_name}</h2>
         </div>
       </Link>

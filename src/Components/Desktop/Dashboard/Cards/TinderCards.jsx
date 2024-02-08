@@ -97,26 +97,31 @@ function Advanced({ activity }) {
             onSwipe={(dir) => swiped(dir, character.user_id, index)}
           >
             <div
-              style={{ backgroundImage: `url(${character.images[0].url})` }}
+              style={{
+                backgroundImage: `url(${
+                  character.images[0]?.url ||
+                  '<img src="https://via.placeholder.com/150" alt="Placeholder image">'
+                })`,
+              }}
               className="card"
             >
               <div className="gender">
                 <FontAwesomeIcon
                   icon={faDog}
                   color={
-                    character.gender_identity === "male" ? "#0048B0" : "#EA00F5"
+                    character?.gender_identity === "male" ? "#0048B0" : "#EA00F5"
                   }
                 />
               </div>
               <div className="country-container">
                 <FontAwesomeIcon icon={faLocationDot} />
                 <h4 className="address_country">
-                  {character.address_info.country}
+                  {character?.address_info?.country}
                 </h4>
               </div>
               <div className="city-container">
                 <FontAwesomeIcon icon={faTreeCity} />
-                <h4 className="address_name">{character.address_info.name}</h4>
+                <h4 className="address_name">{character.address_info?.name}</h4>
               </div>
               <h3 className="pet_name">{character.pet_name}</h3>
             </div>
